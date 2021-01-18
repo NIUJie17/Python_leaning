@@ -56,4 +56,20 @@ fun_bmi_upgrade(list1, list2)
         print("函数体外的值" + message)
         
         输出结果为： 1 2 2
+        
+6. 匿名函数 lambda
+    匿名函数是指没有名字的函数，应用在一个函数
+    函数格式为：
+      result = lambda [arg1 [, arg2, ..., argn]]:expression
+      result : 用于调用lambda表达式
+      参数是用于指定要传递的参数列表
+      expression: 用于指定一个实现具体功能的表达式。
+      *********使用lambda表达式，参数是可以有多个的，但是表达式只能有一个。********
+      
+      例子：
+  import math
+  r = 10
+  result = r : math.pi*r*r
+  使用lambda表达式时，需要用一个变量去调用这个表达式
+  
 
