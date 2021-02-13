@@ -52,4 +52,24 @@
     
     私有属性不能通过实例名称访问，会出错。
     
-8. 在python中通过   @property     将一个方法转化为属性，将方法转化为属性后，可以直接通过方法名来访问方法。
+8. 在python中通过   @property     将一个方法转化为属性，将方法转化为属性后，可以直接通过方法名来访问方法，而不再需要添加一对小括号()。
+    例子：
+    class Rec:
+    def __init__(self,length,width):
+        self.length = length
+        self.width = width
+    
+    def area1(self):
+        return self.length * self.width
+
+    @property
+    def area2(self):
+        return self.length * self.width
+        
+    rect = Rec(800,600)
+    area = rect.area1()
+    print(area)
+    area1 = rect.area2
+    print(area1)
+    
+    使用  @property 转化后的属性不能重新赋值。
