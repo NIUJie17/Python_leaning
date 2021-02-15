@@ -116,6 +116,16 @@
 
     apple = Apple()
     apple.harvest(apple.color)
-print("\n")
-orange = Orange("不知道啥颜色")
-orange.harvest("黄色")
+    print("\n")
+    orange = Orange("不知道啥颜色")
+    orange.harvest("黄色")
+    
+    结果：
+      我是苹果
+      水果是红色的
+      水果已经收获
+      水果原来是绿色的
+
+
+      橙子是黄色的
+      水果已经收获
