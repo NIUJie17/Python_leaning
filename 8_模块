@@ -1,1 +1,24 @@
+1. 创建模块
+  可以将模块中相关的代码编写在一个单独的文件中，并且将该文件名名为   模块名+.py
+  
+2. 使用import导入模块
+  import modulename [as alias]  中括号中为给模块起的别名，通过该别名也可以使用模块。
+  例如：
+  import bmi as m
+  bmi.fun_bmi("牛杰", 175， 130)
+  也可以
+  m.fun_bmi("牛杰", 175， 130)
 
+3. import bmi, tips, deffenenttree  导入多个模块时
+
+4. 使用from....import语句导入模块
+  from bmi import fun_bmi                         导入bmi模块的fun_bmi函数
+  from bmi import fun_bmi, fun_bmi_upgrade        导入bmi模块的fun_bmi和fun_bmi_upgrade函数
+  from bmi import *                               导入bmi模块的全部定义
+  
+5. 当导入的两个模块中有重名方法时：
+    如果使用from.....import...方法时，不明确哪个模块，后导入的方法会重写了先导入的模块的重名方法
+    应该使用import....as....方法
+    然后在使用重名方法时，前面加上模块名      模块名.方法名
+    
+    
