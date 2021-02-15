@@ -90,3 +90,32 @@
 
   
     要让派生类调用基类的__init__()方法进行必要的初始化，需要在派生类使用super()函数调用基类的__init__()方法。 P200
+    
+    例子：
+    class Fruit:
+    def __init__(self, color = "绿色"):
+        Fruit.color = color
+    def harvest(self, color):
+        print("水果是" + self.color + "的")
+        print("水果已经收获")
+        print("水果原来是" + Fruit.color + "的")
+
+    class Apple(Fruit):
+      color = "红色"
+      def __init__(self):
+          print("我是苹果")
+         super().__init__()
+
+    class Orange(Fruit):
+       def __init__(self, color):
+         super().__init__(color)
+       def harvest(self, color):
+          print("橙子是" + color + "的")
+          print("水果已经收获")
+          print("橙子原来是" + Fruit.color + "的")
+
+    apple = Apple()
+    apple.harvest(apple.color)
+print("\n")
+orange = Orange("不知道啥颜色")
+orange.harvest("黄色")
